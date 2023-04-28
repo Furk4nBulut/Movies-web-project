@@ -8,3 +8,5 @@ def travelwebpage(request):
 
 def blog(request):
     return render(request, 'pages/blog.html')
+def index(request):
+    return render(request,'pages/index.html')

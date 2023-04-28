@@ -3,31 +3,25 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-        <title>Travel application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+        <title>Catalog application</title>
+        <link rel ="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel ="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel ="stylesheet" href="{% static 'css/bootstrap.min.js' %}">
-
+        
     </head>
     <body>
-        <header>
-          <div class="navbar navbar-expand-sm bg-primary navdar-dark">
-            <div class="container">
-                <a href="" class="navbar-brand">Movie App</a>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+        {% include 'partials/_navbar.html' %}
+        
         <main>
-            {% block content %}
-            {% endblock %}
+            <div class="container mt-4">
+                {% block content %}
+                {% endblock %}
+            </div>
         </main>
-        <footer></footer>
-       
+      
+         {% include 'partials/_footer.html' %}
+         
         <script src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
         <script src="{% static 'js/bootstrap.min.js' %} "></script>
         <script src="{% static 'js/popper.min.js' %} "></script>

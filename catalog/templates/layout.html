@@ -6,10 +6,30 @@
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
         <title>Travel application</title>
-        <link rel ="stylesheet" href="{% static 'css/style.css' %}"><section></section>
+        <link rel ="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel ="stylesheet" href="{% static 'css/bootstrap.min.js' %}">
+
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
+        <header>
+          <div class="navbar navbar-expand-sm bg-primary navdar-dark">
+            <div class="container">
+                <a href="" class="navbar-brand">Movie App</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer></footer>
+       
+        <script src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
+        <script src="{% static 'js/bootstrap.min.js' %} "></script>
+        <script src="{% static 'js/popper.min.js' %} "></script>
     </body>
 </html>

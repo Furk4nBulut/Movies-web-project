@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "static",
+			"path": "../../../24-Web Geliştirme Django/7-Bootstrap Theme/catalog/static"
+		},
+		{
+			"name": "catalog",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

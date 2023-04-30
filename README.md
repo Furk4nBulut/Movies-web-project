@@ -1,2 +1,2 @@
 # Movies-web-project
-This project coint my django learning process.
+This project contain my django learning process.

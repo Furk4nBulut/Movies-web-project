@@ -38,8 +38,16 @@
             </ul>
         </ul>
             <ul class="navbar-nav ">
-
-                <li
+                {%  if user.is_authenticated %}
+                     <li class="nav-item">
+                    <a  href="javascript:{document.getElementById('logout').submit()}" class="nav-link">({{ user.username   }}) Logout</a>
+                     <form action="{% url 'logout' %}" method="POST" id="logout">
+                         {%  csrf_token %}
+                         <input  type = "hidden">
+                     </form>
+                </li>
+                {%  else %}
+                    <li
                     {% if 'login' in request.path %}
                         class="nav-item active"
                     {% else %}
@@ -48,20 +56,16 @@
                 >
                     <a  href="{% url 'login' %}" class="nav-link">Login</a>
                 </li>
-                <li  {% if 'register' in request.path %}
+                    <li  {% if 'register' in request.path %}
                         class="nav-item active"
                     {% else %}
                          class="nav-item"
                     {% endif %} >
                     <a  href="{% url 'register' %}" class="nav-link">Register</a>
                 </li>
-         <!--   <li  {% if 'logout' in request.path %}
-                        class="nav-item active"
-                    {% else %}
-                         class="nav-item"
-                    {% endif %} >
-                    <a  href="{% url 'logout' %}" class="nav-link">Logout</a>
-                </li>-->
+                {%  endif %}
+
+
 
             </ul>
 

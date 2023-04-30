@@ -6,6 +6,6 @@ from . import views
 # 127.0.0.1:8000/detail
 urlpatterns = [
     path('movies',views.index, name='movies'),
-    path('<int:movie_id>',views.detail, name='details'),
+    path('<int:movie_id>',views.detail, name='detail'),
     path('search',views.search, name='search'),
 ]
